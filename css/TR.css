@@ -1,46 +1,63 @@
+:root {
+      --dark-accent: #4ec252;
+      --dark-bg: #1b1b1b;
+      --dark-error: #d32f2f;
+      --dark-primary: #2e2e2e;
+      --dark-secondary: #3a3a3a;
+      --dark-success: #388e3c;
+      --dark-text: #982dc9;
+      --dark-warning: #d3b52f;
+      --dark-alt: rgb(205, 68, 26);
+  }
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: rgb(5, 111, 247);
-}
-.question {
-    margin-bottom: 20px;
-}
+      background: rgb(3, 31, 48);
+      background: linear-gradient(180deg, rgb(3, 31, 48) 63%, rgb(205, 68, 26) 100%);
+      font-family: "Silkscreen", serif;
+      font-style: normal;
+      font-weight: 400;
+      margin: 20px;
+  }
+h1,
+h2 {
+      border-bottom: 2px solid var(--dark-accent);
+      color: var(--dark-accent);
+      font-size: 16px;
+      padding: 5px;
+      text-align: center;
+  }
+h2 {
+      color: var(--dark-alt);
+      font-size: 10px;
+  }
+  .examp{
+    color: var(--dark-warning);
+    
+  }
 label {
-    display: block;
-    margin-bottom: 5px;
-}
-input[type="text"], textarea {
-    width: 50%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
+      color: var(--dark-text);
+      display: block;
+      margin-bottom: 5px;
+  }
+input[type="text"],
+textarea {
+      background-color: var(--dark-primary);
+      border: 1px solid var(--dark-secondary);
+      border-radius: 4px;
+      box-shadow: 2px 3px 7px 1px #455255;
+      color: var(--dark-text);
+      margin-bottom: 10px;
+      width: 100%;
+  }
 button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
+      background-color: var(--dark-accent);
+      border: none;
+      border-radius: 4px;
+      color: var(--dark-text);
+      cursor: pointer;
+      display: block;
+      margin: 10px auto;
+      padding: 10px 20px;
+  }
 button:hover {
-    background-color: #45a049;
-}
-
-#CharlieOutPut{
-    width: 50%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px; 
-}
-
-#radialOutPut{
-    width: 50%;
-    padding: 8px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px; 
-}
+      background-color: var(--dark-success);
+  }

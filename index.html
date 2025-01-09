@@ -4,48 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/TR.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
     <title>TR-Rig Bumpers</title>
     
        
 </head>
 <body>
-    <h1>TR-Rig</h1>
+    <h1>Thrust Reverser Rig Tool</h1>
+    <h2>All Measurments in "Inches"</h2>
     <form id="input">
         <!--  C-1 - C-5 Measurements -->
         <div class="question">
-            <label for="CharlieMeasurents">C1 - C5:</label>
+            <label for="CharlieMeasurents">C1 - C5: <span class="examp"> (.05"-.12")</span></label>
             <input type="text" class="inputData" id="charlieBumpers" name="Measeurements">
-             <div id="CharlieOutPut"></div>
+             <div class="isNanData" id="CharlieOutPut"></div>
         </div>
         <!--  Radial 1&2 Measurements -->
 
         <div class="question">
-            <label for="RadialMeasurements">Radial 1:</label>
+            <label for="RadialMeasurements">Radial Left:<span class="examp"> (.050"-.080")</span></label>
             <input type="text" class="inputData" id="radialBumpers" name="Measurements">
-            <div id="radialOutPut"></div>
+            <div class="isNanData" id="radialOneOutPut"></div>
 
         </div>
         <div class="question">
-            <label for="question3">Radial 2:</label>
-            <input type="text" id="question3" name="question3">
+            <label for="question3">Radial Right:<span class="examp"> (.050"-.080")</span></label>
+            <input type="text" class="inputData" id="question3" name="question3">
+            <div class="isNanData" id="radialOutPutTwo"></div>
+
         </div>
         <div class="question">
-            <label for="question4">D:</label>
-            <input type="text" id="question4" name="question4">
+            <label for="question4">D:<span class="examp"> .05-.12</span></label>
+            <input type="text" class="inputData" id="question4" name="question4">
+            <div class="isNanData" id="deltaOut"></div>
+
         </div>
         <div class="question">
-            <label for="question5">E:</label>
-            <input type="text" id="question5" name="question5">
+            <label for="question5">E:<span class="examp"> .05-.12</span></label>
+            <input type="text" class="inputData" id="question5" name="question5">
+            <div class="isNanData" id="echoOut"></div>
+
         </div>
         <div class="question">
-            <label for="question6">Doghouse:</label>
-            <input type="text" id="question6" name="question6">
+            <label for="question6">Doghouse #1:<span class="examp"> (.000"-.143")</span></label>
+            <input type="text" class="inputData" id="question6" name="question6">
+            <div class="isNanData" id="dogHouseOut"></div>
+
         </div>
         <div class="question">
-            <label for="question7">Struts:</label>
-            <input type="text" id="question7" name="question7">
+            <label for="question7">Doghouse #2<span class="examp"> (.002"-.206")</span></label>
+            <input type="text" class="inputData" id="question6" name="question6">
+            <div class="isNanData" id="dogHouseTwoOut"></div>
+
         </div>
-        <button type="button" id="bumperTolerance">Find Tolorance</button>
+        <div class="question">
+            <label for="question8">Doghouse #3:<span class="examp"> (.002"-.120")</span></label>
+            <input type="text" class="inputData" id="question6" name="question6">
+            <div class="isNanData" id="dogHouseThreeOut"></div>
+
+        </div>
+        <div class="question">
+            <label for="question9">Struts:<span class="examp"> .05-.12</span></label>
+            <input type="text" class="inputData" id="question7" name="question7">
+            <div class="isNanData" id="strutOut"></div>
+
+        </div>
+        <button type="button" id="bumperTolerance">Find Tolerance</button>
     </form>
 
 
