@@ -198,7 +198,7 @@ function bumperTolerance() {
     }
       // CHECK IF THE INPUT VALUE OF DOGHOUSE #3 BUMPER IS A VALID NUMBER AND WITHIN THE TOLERANCE RANGE
       if (!isNaN(inputValue[7])) {
-        if (inputValue[7] >= bumpers[14] && inputValue[5] <= bumpers[15]) {
+        if (inputValue[7] >= bumpers[14] && inputValue[7] <= bumpers[15]) {
             console.log("Radial #2 Bumpers within tolerance");
             document.getElementById("dogHouseThreeOut").innerHTML = inputValue[7] + "\" Within tolerance ";
             document.getElementById("dogHouseThreeOut").style.backgroundColor = "var(--dark-success)";
@@ -216,7 +216,7 @@ function bumperTolerance() {
     }
        // CHECK IF THE INPUT VALUE OF STRUT BUMPER IS A VALID NUMBER AND WITHIN THE TOLERANCE RANGE
        if (!isNaN(inputValue[8])) {
-        if (inputValue[8] >= bumpers[16] && inputValue[6] <= bumpers[17]) {
+        if (inputValue[8] >= bumpers[16] && inputValue[8] <= bumpers[17]) {
             console.log("Radial #2 Bumpers within tolerance");
             document.getElementById("strutOut").innerHTML = inputValue[8] + "\" Within tolerance ";
             document.getElementById("strutOut").style.backgroundColor = "var(--dark-success)";
