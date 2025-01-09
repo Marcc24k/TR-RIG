@@ -180,14 +180,14 @@ function bumperTolerance() {
     }
       // CHECK IF THE INPUT VALUE OF DOGHOUSE #2 BUMPER IS A VALID NUMBER AND WITHIN THE TOLERANCE RANGE
       if (!isNaN(inputValue[6])) {
-        if (inputValue[6] >= bumpers[12] && inputValue[5] <= bumpers[13]) {
+        if (inputValue[6] >= bumpers[12] && inputValue[6] <= bumpers[13]) {
             console.log("Radial #2 Bumpers within tolerance");
-            document.getElementById("dogHouseTwoOut").innerHTML = inputValue[5] + "\" Within tolerance ";
+            document.getElementById("dogHouseTwoOut").innerHTML = inputValue[6] + "\" Within tolerance ";
             document.getElementById("dogHouseTwoOut").style.backgroundColor = "var(--dark-success)";
         } else {
             console.log("Radial Bumpers out of tolerance");
             // Update the HTML element with ID "radialOneOutPut" to show the input value is out of tolerance
-            document.getElementById("dogHouseTwoOut").innerHTML = inputValue[5] + "\" is Out of tolerance ";
+            document.getElementById("dogHouseTwoOut").innerHTML = inputValue[6] + "\" is Out of tolerance ";
             document.getElementById("dogHouseTwoOut").style.backgroundColor = "var(--dark-error)";
         }
     } else {
