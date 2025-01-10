@@ -3,7 +3,7 @@ let callButton = document.getElementById("bumperTolerance").addEventListener("cl
 
 // Main function that runs the program
 function bumperTolerance() {
-    // Array holding the minimum and maximum tolerance for the bumpers
+    // Array holding the minimum and maximum tolerance for the bumpers in  (inches)
     const bumpers = [
         0.005, // C-1 - C-5 BUMPER MIN TOLERANCE [0]
         0.12,  // C-1 - C-5 BUMPER MAX TOLERANCE [1]
