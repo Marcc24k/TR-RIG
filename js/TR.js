@@ -234,15 +234,15 @@ function bumperTolerance() {
     }
 }
 
-// Add an event listener for mouse movement
-document.addEventListener('mousemove', (event) => {
-    // Calculate the horizontal position of the mouse as a fraction of the window width
-    const x = event.clientX / window.innerWidth;
-    // Calculate the vertical position of the mouse as a fraction of the window height
-    const y = event.clientY / window.innerHeight;
-    // Calculate the angle for the gradient based on the mouse position
-    // atan2 returns the angle in radians, which is converted to degrees
-    const angle = Math.atan2(y - .5, x - .5) * (180 / Math.PI) + 180;
-    // Update the background gradient of the body element with the calculated angle
-    document.body.style.background = `linear-gradient(${angle}deg, rgb(3, 31, 48) 63%, #193915 100%)`;
-});
+// // Add an event listener for mouse movement
+// document.addEventListener('mousemove', (event) => {
+//     // Calculate the horizontal position of the mouse as a fraction of the window width
+//     const x = event.clientX / window.innerWidth;
+//     // Calculate the vertical position of the mouse as a fraction of the window height
+//     const y = event.clientY / window.innerHeight;
+//     // Calculate the angle for the gradient based on the mouse position
+//     // atan2 returns the angle in radians, which is converted to degrees
+//     const angle = Math.atan2(y - .5, x - .5) * (180 / Math.PI) + 180;
+//     // Update the background gradient of the body element with the calculated angle
+//     document.body.style.background = `linear-gradient(${angle}deg, rgb(3, 31, 48) 63%, #193915 100%)`;
+// });
