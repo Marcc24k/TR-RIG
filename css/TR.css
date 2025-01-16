@@ -51,7 +51,7 @@ input[type="text"], textarea {
     border: 1px solid var(--dark-secondary);
     border-radius: 4px;
     box-shadow: 2px 3px 7px 1px #7929a980;
-    color: var(--dark-text);
+    color: var(--dark-warning);
     margin-bottom: 10px;
     width: 100%;
 }
