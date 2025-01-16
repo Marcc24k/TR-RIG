@@ -77,172 +77,211 @@ function bumperTolerance() {
             document.getElementById("CharlieOutPut").style.backgroundColor = "var(--dark-success)";
         } else {
             console.log("C-1 - C-5 out of tolerance");
-            // Update the HTML element with ID "CharlieOutPut" to show the input value is out of tolerance
-            document.getElementById("CharlieOutPut").innerHTML = inputValue[0] + "\" is Out of tolerance ";
+            let correction;   
+            if (inputValue[0] < bumpers[0]) {
+                correction = bumpers[0] - inputValue[0];
+                document.getElementById("CharlieOutPut").innerHTML = inputValue[0] + "\" is Out of tolerance. Add " + correction + "\" to bring within tolerance.";
+            } else {
+                correction = inputValue[0] - bumpers[1];
+                document.getElementById("CharlieOutPut").innerHTML = inputValue[0] + "\" is Out of tolerance. Remove " + correction + "\" to bring within tolerance.";
+            }
             document.getElementById("CharlieOutPut").style.backgroundColor = "var(--dark-error)";
         }
     } else {
         console.log("Please enter a valid number");
-        // Update the HTML element with ID "CharlieOutPut" to show an error message
-        document.getElementById("CharlieOutPut").style.backgroundColor = "var( --dark-warning)";
         document.getElementById("CharlieOutPut").innerHTML = "Please enter a valid number!";
+        document.getElementById("CharlieOutPut").style.backgroundColor = "var(--dark-warning)";
     }
 
-    // Check if the input value of Radial Bumper Left is a valid number and within the tolerance range
-    if (!isNaN(inputValue[1])) {
-        if (inputValue[1] >= bumpers[2] && inputValue[1] <= bumpers[3]) {
-            console.log("Radial #1 Bumpers within tolerance");
-            document.getElementById("radialOneOutPut").innerHTML = inputValue[1] + "\" Within tolerance ";
-            document.getElementById("radialOneOutPut").style.backgroundColor = "var(--dark-success)";
-        } else {
-            console.log("Radial Bumpers out of tolerance");
-            // Update the HTML element with ID "radialOneOutPut" to show the input value is out of tolerance
-            document.getElementById("radialOneOutPut").innerHTML = inputValue[1] + "\" is Out of tolerance ";
-            document.getElementById("radialOneOutPut").style.backgroundColor = "var(--dark-error)";
-        }
+   // Check if the input value of Radial Bumper Left is a valid number and within the tolerance range
+if (!isNaN(inputValue[1])) {
+    if (inputValue[1] >= bumpers[2] && inputValue[1] <= bumpers[3]) {
+        console.log("Radial #1 Bumpers within tolerance");
+        document.getElementById("radialOneOutPut").innerHTML = inputValue[1] + "\" Within tolerance ";
+        document.getElementById("radialOneOutPut").style.backgroundColor = "var(--dark-success)";
     } else {
-        console.log("Please enter a valid number");
-        // Update the HTML element with ID "radialOneOutPut" to show an error message
-        document.getElementById("radialOneOutPut").innerHTML = "Please enter a valid number!";
-        document.getElementById("radialOneOutPut").style.backgroundColor = "var(--dark-warning)";
-    }
-    // Check if the input value of Radial Bumper Right is a valid number and within the tolerance range
-    if (!isNaN(inputValue[2])) {
-        if (inputValue[2] >= bumpers[4] && inputValue[2] <= bumpers[5]) {
-            console.log("Radial #2 Bumpers within tolerance");
-            document.getElementById("radialOutPutTwo").innerHTML = inputValue[2] + "\" Within tolerance ";
-            document.getElementById("radialOutPutTwo").style.backgroundColor = "var(--dark-success)";
+        console.log("Radial Bumpers out of tolerance");
+        let correction;
+        if (inputValue[1] < bumpers[2]) {
+            correction = bumpers[2] - inputValue[1];
+            document.getElementById("radialOneOutPut").innerHTML = inputValue[1] + "\" is Out of tolerance. Add " + correction + "\" to bring within tolerance.";
         } else {
-            console.log("Radial Bumpers out of tolerance");
-            // Update the HTML element with ID "radialOneOutPut" to show the input value is out of tolerance
-            document.getElementById("radialOutPutTwo").innerHTML = inputValue[2] + "\" is Out of tolerance ";
-            document.getElementById("radialOutPutTwo").style.backgroundColor = "var(--dark-error)";
+            correction = inputValue[1] - bumpers[3];
+            document.getElementById("radialOneOutPut").innerHTML = inputValue[1] + "\" is Out of tolerance. Remove " + correction + "\" to bring within tolerance.";
         }
-    } else {
-        console.log("Please enter a valid number");
-        // Update the HTML element with ID "radialOneOutPut" to show an error message
-        document.getElementById("radialOutPutTwo").innerHTML = "Please enter a valid number!";
-        document.getElementById("radialOutPutTwo").style.backgroundColor = "var(--dark-warning)";
+        document.getElementById("radialOneOutPut").style.backgroundColor = "var(--dark-error)";
     }
-    // Check if the input value of Delta Bumper is a valid number and within the tolerance range
-    if (!isNaN(inputValue[3])) {
-        if (inputValue[3] >= bumpers[6] && inputValue[3] <= bumpers[7]) {
-            console.log("Radial #2 Bumpers within tolerance");
-            document.getElementById("deltaOut").innerHTML = inputValue[3] + "\" Within tolerance ";
-            document.getElementById("deltaOut").style.backgroundColor = "var(--dark-success)";
-        } else {
-            console.log("Radial Bumpers out of tolerance");
-            // Update the HTML element with ID "radialOneOutPut" to show the input value is out of tolerance
-            document.getElementById("deltaOut").innerHTML = inputValue[3] + "\" is Out of tolerance ";
-            document.getElementById("deltaOut").style.backgroundColor = "var(--dark-error)";
-        }
-    } else {
-        console.log("Please enter a valid number");
-        // Update the HTML element with ID "radialOneOutPut" to show an error message
-        document.getElementById("deltaOut").innerHTML = "Please enter a valid number!";
-        document.getElementById("deltaOut").style.backgroundColor = "var(--dark-warning)";
-    }
-       // CHECK IF THE INPUT VALUE OF ECHO BUMPER IS A VALID NUMBER AND WITHIN THE TOLERANCE RANGE
-       if (!isNaN(inputValue[4])) {
-        if (inputValue[4] >= bumpers[8] && inputValue[4] <= bumpers[9]) {
-            console.log("Radial #2 Bumpers within tolerance");
-            document.getElementById("echoOut").innerHTML = inputValue[4] + "\" Within tolerance ";
-            document.getElementById("echoOut").style.backgroundColor = "var(--dark-success)";
-        } else {
-            console.log("Radial Bumpers out of tolerance");
-            // Update the HTML element with ID "radialOneOutPut" to show the input value is out of tolerance
-            document.getElementById("echoOut").innerHTML = inputValue[4] + "\" is Out of tolerance ";
-            document.getElementById("echoOut").style.backgroundColor = "var(--dark-error)";
-        }
-    } else {
-        console.log("Please enter a valid number");
-        // Update the HTML element with ID "radialOneOutPut" to show an error message
-        document.getElementById("echoOut").innerHTML = "Please enter a valid number!";
-        document.getElementById("echoOut").style.backgroundColor = "var(--dark-warning)";
-    }
-       // CHECK IF THE INPUT VALUE OF DOGHOUSE #1 BUMPER IS A VALID NUMBER AND WITHIN THE TOLERANCE RANGE
-       if (!isNaN(inputValue[5])) {
-        if (inputValue[5] >= bumpers[10] && inputValue[5] <= bumpers[11]) {
-            console.log("Radial #2 Bumpers within tolerance");
-            document.getElementById("dogHouseOut").innerHTML = inputValue[5] + "\" Within tolerance ";
-            document.getElementById("dogHouseOut").style.backgroundColor = "var(--dark-success)";
-        } else {
-            console.log("Radial Bumpers out of tolerance");
-            // Update the HTML element with ID "radialOneOutPut" to show the input value is out of tolerance
-            document.getElementById("dogHouseOut").innerHTML = inputValue[5] + "\" is Out of tolerance ";
-            document.getElementById("dogHouseOut").style.backgroundColor = "var(--dark-error)";
-        }
-    } else {
-        console.log("Please enter a valid number");
-        // Update the HTML element with ID "radialOneOutPut" to show an error message
-        document.getElementById("dogHouseOut").innerHTML = "Please enter a valid number!";
-        document.getElementById("dogHouseOut").style.backgroundColor = "var(--dark-warning)";
-    }
-      // CHECK IF THE INPUT VALUE OF DOGHOUSE #2 BUMPER IS A VALID NUMBER AND WITHIN THE TOLERANCE RANGE
-      if (!isNaN(inputValue[6])) {
-        if (inputValue[6] >= bumpers[12] && inputValue[6] <= bumpers[13]) {
-            console.log("Radial #2 Bumpers within tolerance");
-            document.getElementById("dogHouseTwoOut").innerHTML = inputValue[6] + "\" Within tolerance ";
-            document.getElementById("dogHouseTwoOut").style.backgroundColor = "var(--dark-success)";
-        } else {
-            console.log("Radial Bumpers out of tolerance");
-            // Update the HTML element with ID "radialOneOutPut" to show the input value is out of tolerance
-            document.getElementById("dogHouseTwoOut").innerHTML = inputValue[6] + "\" is Out of tolerance ";
-            document.getElementById("dogHouseTwoOut").style.backgroundColor = "var(--dark-error)";
-        }
-    } else {
-        console.log("Please enter a valid number");
-        // Update the HTML element with ID "radialOneOutPut" to show an error message
-        document.getElementById("dogHouseTwoOut").innerHTML = "Please enter a valid number!";
-        document.getElementById("dogHouseTwoOut").style.backgroundColor = "var(--dark-warning)";
-    }
-      // CHECK IF THE INPUT VALUE OF DOGHOUSE #3 BUMPER IS A VALID NUMBER AND WITHIN THE TOLERANCE RANGE
-      if (!isNaN(inputValue[7])) {
-        if (inputValue[7] >= bumpers[14] && inputValue[7] <= bumpers[15]) {
-            console.log("Radial #2 Bumpers within tolerance");
-            document.getElementById("dogHouseThreeOut").innerHTML = inputValue[7] + "\" Within tolerance ";
-            document.getElementById("dogHouseThreeOut").style.backgroundColor = "var(--dark-success)";
-        } else {
-            console.log("Radial Bumpers out of tolerance");
-            // Update the HTML element with ID "radialOneOutPut" to show the input value is out of tolerance
-            document.getElementById("dogHouseThreeOut").innerHTML = inputValue[7] + "\" is Out of tolerance ";
-            document.getElementById("dogHouseThreeOut").style.backgroundColor = "var(--dark-error)";
-        }
-    } else {
-        console.log("Please enter a valid number");
-        // Update the HTML element with ID "radialOneOutPut" to show an error message
-        document.getElementById("dogHouseThreeOut").innerHTML = "Please enter a valid number!";
-        document.getElementById("dogHouseThreeOut").style.backgroundColor = "var(--dark-warning)";
-    }
-       // CHECK IF THE INPUT VALUE OF STRUT BUMPER IS A VALID NUMBER AND WITHIN THE TOLERANCE RANGE
-       if (!isNaN(inputValue[8])) {
-        if (inputValue[8] >= bumpers[16] && inputValue[8] <= bumpers[17]) {
-            console.log("Radial #2 Bumpers within tolerance");
-            document.getElementById("strutOut").innerHTML = inputValue[8] + "\" Within tolerance ";
-            document.getElementById("strutOut").style.backgroundColor = "var(--dark-success)";
-        } else {
-            console.log("Radial Bumpers out of tolerance");
-            // Update the HTML element with ID "radialOneOutPut" to show the input value is out of tolerance
-            document.getElementById("strutOut").innerHTML = inputValue[8] + "\" is Out of tolerance ";
-            document.getElementById("strutOut").style.backgroundColor = "var(--dark-error)";
-        }
-    } else {
-        console.log("Please enter a valid number");
-        // Update the HTML element with ID "radialOneOutPut" to show an error message
-        document.getElementById("strutOut").innerHTML = "Please enter a valid number!";
-        document.getElementById("strutOut").style.backgroundColor = "var(--dark-warning)";
-    }
+} else {
+    console.log("Please enter a valid number");
+    document.getElementById("radialOneOutPut").innerHTML = "Please enter a valid number!";
+    document.getElementById("radialOneOutPut").style.backgroundColor = "var(--dark-warning)";
 }
 
-// // Add an event listener for mouse movement
-// document.addEventListener('mousemove', (event) => {
-//     // Calculate the horizontal position of the mouse as a fraction of the window width
-//     const x = event.clientX / window.innerWidth;
-//     // Calculate the vertical position of the mouse as a fraction of the window height
-//     const y = event.clientY / window.innerHeight;
-//     // Calculate the angle for the gradient based on the mouse position
-//     // atan2 returns the angle in radians, which is converted to degrees
-//     const angle = Math.atan2(y - .5, x - .5) * (180 / Math.PI) + 180;
-//     // Update the background gradient of the body element with the calculated angle
-//     document.body.style.background = `linear-gradient(${angle}deg, rgb(3, 31, 48) 63%, #193915 100%)`;
-// });
+// Check if the input value of Radial Bumper Right is a valid number and within the tolerance range
+if (!isNaN(inputValue[2])) {
+    if (inputValue[2] >= bumpers[4] && inputValue[2] <= bumpers[5]) {
+        console.log("Radial #2 Bumpers within tolerance");
+        document.getElementById("radialOutPutTwo").innerHTML = inputValue[2] + "\" Within tolerance ";
+        document.getElementById("radialOutPutTwo").style.backgroundColor = "var(--dark-success)";
+    } else {
+        console.log("Radial Bumpers out of tolerance");
+        let correction;
+        if (inputValue[2] < bumpers[4]) {
+            correction = bumpers[4] - inputValue[2];
+            document.getElementById("radialOutPutTwo").innerHTML = inputValue[2] + "\" is Out of tolerance. Add " + correction + "\" to bring within tolerance.";
+        } else {
+            correction = inputValue[2] - bumpers[5];
+            document.getElementById("radialOutPutTwo").innerHTML = inputValue[2] + "\" is Out of tolerance. Remove " + correction + "\" to bring within tolerance.";
+        }
+        document.getElementById("radialOutPutTwo").style.backgroundColor = "var(--dark-error)";
+    }
+} else {
+    console.log("Please enter a valid number");
+    document.getElementById("radialOutPutTwo").innerHTML = "Please enter a valid number!";
+    document.getElementById("radialOutPutTwo").style.backgroundColor = "var(--dark-warning)";
+}
+
+// Check if the input value of Delta Bumper is a valid number and within the tolerance range
+if (!isNaN(inputValue[3])) {
+    if (inputValue[3] >= bumpers[6] && inputValue[3] <= bumpers[7]) {
+        console.log("Delta Bumper within tolerance");
+        document.getElementById("deltaOut").innerHTML = inputValue[3] + "\" Within tolerance ";
+        document.getElementById("deltaOut").style.backgroundColor = "var(--dark-success)";
+    } else {
+        console.log("Delta Bumper out of tolerance");
+        let correction;
+        if (inputValue[3] < bumpers[6]) {
+            correction = bumpers[6] - inputValue[3];
+            document.getElementById("deltaOut").innerHTML = inputValue[3] + "\" is Out of tolerance. Add " + correction + "\" to bring within tolerance.";
+        } else {
+            correction = inputValue[3] - bumpers[7];
+            document.getElementById("deltaOut").innerHTML = inputValue[3] + "\" is Out of tolerance. Remove " + correction + "\" to bring within tolerance.";
+        }
+        document.getElementById("deltaOut").style.backgroundColor = "var(--dark-error)";
+    }
+} else {
+    console.log("Please enter a valid number");
+    document.getElementById("deltaOut").innerHTML = "Please enter a valid number!";
+    document.getElementById("deltaOut").style.backgroundColor = "var(--dark-warning)";
+}
+
+// Check if the input value of Echo Bumper is a valid number and within the tolerance range
+if (!isNaN(inputValue[4])) {
+    if (inputValue[4] >= bumpers[8] && inputValue[4] <= bumpers[9]) {
+        console.log("Echo Bumper within tolerance");
+        document.getElementById("echoOut").innerHTML = inputValue[4] + "\" Within tolerance ";
+        document.getElementById("echoOut").style.backgroundColor = "var(--dark-success)";
+    } else {
+        console.log("Echo Bumper out of tolerance");
+        let correction;
+        if (inputValue[4] < bumpers[8]) {
+            correction = bumpers[8] - inputValue[4];
+            document.getElementById("echoOut").innerHTML = inputValue[4] + "\" is Out of tolerance. Add " + correction + "\" to bring within tolerance.";
+        } else {
+            correction = inputValue[4] - bumpers[9];
+            document.getElementById("echoOut").innerHTML = inputValue[4] + "\" is Out of tolerance. Remove " + correction + "\" to bring within tolerance.";
+        }
+        document.getElementById("echoOut").style.backgroundColor = "var(--dark-error)";
+    }
+} else {
+    console.log("Please enter a valid number");
+    document.getElementById("echoOut").innerHTML = "Please enter a valid number!";
+    document.getElementById("echoOut").style.backgroundColor = "var(--dark-warning)";
+}
+
+// Check if the input value of Doghouse #1 Bumper is a valid number and within the tolerance range
+if (!isNaN(inputValue[5])) {
+    if (inputValue[5] >= bumpers[10] && inputValue[5] <= bumpers[11]) {
+        console.log("Doghouse #1 Bumper within tolerance");
+        document.getElementById("dogHouseOut").innerHTML = inputValue[5] + "\" Within tolerance ";
+        document.getElementById("dogHouseOut").style.backgroundColor = "var(--dark-success)";
+    } else {
+        console.log("Doghouse #1 Bumper out of tolerance");
+        let correction;
+        if (inputValue[5] < bumpers[10]) {
+            correction = bumpers[10] - inputValue[5];
+            document.getElementById("dogHouseOut").innerHTML = inputValue[5] + "\" is Out of tolerance. Add " + correction + "\" to bring within tolerance.";
+        } else {
+            correction = inputValue[5] - bumpers[11];
+            document.getElementById("dogHouseOut").innerHTML = inputValue[5] + "\" is Out of tolerance. Remove " + correction + "\" to bring within tolerance.";
+        }
+        document.getElementById("dogHouseOut").style.backgroundColor = "var(--dark-error)";
+    }
+} else {
+    console.log("Please enter a valid number");
+    document.getElementById("dogHouseOut").innerHTML = "Please enter a valid number!";
+    document.getElementById("dogHouseOut").style.backgroundColor = "var(--dark-warning)";
+}
+
+// Check if the input value of Doghouse #2 Bumper is a valid number and within the tolerance range
+if (!isNaN(inputValue[6])) {
+    if (inputValue[6] >= bumpers[12] && inputValue[6] <= bumpers[13]) {
+        console.log("Doghouse #2 Bumper within tolerance");
+        document.getElementById("dogHouseTwoOut").innerHTML = inputValue[6] + "\" Within tolerance ";
+        document.getElementById("dogHouseTwoOut").style.backgroundColor = "var(--dark-success)";
+    } else {
+        console.log("Doghouse #2 Bumper out of tolerance");
+        let correction;
+        if (inputValue[6] < bumpers[12]) {
+            correction = bumpers[12] - inputValue[6];
+            document.getElementById("dogHouseTwoOut").innerHTML = inputValue[6] + "\" is Out of tolerance. Add " + correction + "\" to bring within tolerance.";
+        } else {
+            correction = inputValue[6] - bumpers[13];
+            document.getElementById("dogHouseTwoOut").innerHTML = inputValue[6] + "\" is Out of tolerance. Remove " + correction + "\" to bring within tolerance.";
+        }
+        document.getElementById("dogHouseTwoOut").style.backgroundColor = "var(--dark-error)";
+    }
+} else {
+    console.log("Please enter a valid number");
+    document.getElementById("dogHouseTwoOut").innerHTML = "Please enter a valid number!";
+    document.getElementById("dogHouseTwoOut").style.backgroundColor = "var(--dark-warning)";
+}
+
+// Check if the input value of Doghouse #3 Bumper is a valid number and within the tolerance range
+if (!isNaN(inputValue[7])) {
+    if (inputValue[7] >= bumpers[14] && inputValue[7] <= bumpers[15]) {
+        console.log("Doghouse #3 Bumper within tolerance");
+        document.getElementById("dogHouseThreeOut").innerHTML = inputValue[7] + "\" Within tolerance ";
+        document.getElementById("dogHouseThreeOut").style.backgroundColor = "var(--dark-success)";
+    } else {
+        console.log("Doghouse #3 Bumper out of tolerance");
+        let correction;
+        if (inputValue[7] < bumpers[14]) {
+            correction = bumpers[14] - inputValue[7];
+            document.getElementById("dogHouseThreeOut").innerHTML = inputValue[7] + "\" is Out of tolerance. Add " + correction + "\" to bring within tolerance.";
+        } else {
+            correction = inputValue[7] - bumpers[15];
+            document.getElementById("dogHouseThreeOut").innerHTML = inputValue[7] + "\" is Out of tolerance. Remove " + correction + "\" to bring within tolerance.";
+        }
+        document.getElementById("dogHouseThreeOut").style.backgroundColor = "var(--dark-error)";
+    }
+} else {
+    console.log("Please enter a valid number");
+    document.getElementById("dogHouseThreeOut").innerHTML = "Please enter a valid number!";
+    document.getElementById("dogHouseThreeOut").style.backgroundColor = "var(--dark-warning)";
+}
+
+// Check if the input value of Strut Bumper is a valid number and within the tolerance range
+if (!isNaN(inputValue[8])) {
+    if (inputValue[8] >= bumpers[16] && inputValue[8] <= bumpers[17]) {
+        console.log("Strut Bumper within tolerance");
+        document.getElementById("strutOut").innerHTML = inputValue[8] + "\" Within tolerance ";
+        document.getElementById("strutOut").style.backgroundColor = "var(--dark-success)";
+    } else {
+        console.log("Strut Bumper out of tolerance");
+        let correction;
+        if (inputValue[8] < bumpers[16]) {
+            correction = bumpers[16] - inputValue[8];
+            document.getElementById("strutOut").innerHTML = inputValue[8] + "\" is Out of tolerance. Add " + correction + "\" to bring within tolerance.";
+        } else {
+            correction = inputValue[8] - bumpers[17];
+            document.getElementById("strutOut").innerHTML = inputValue[8] + "\" is Out of tolerance. Remove " + correction + "\" to bring within tolerance.";
+        }
+        document.getElementById("strutOut").style.backgroundColor = "var(--dark-error)";
+    }
+} else {
+    console.log("Please enter a valid number");
+    document.getElementById("strutOut").innerHTML = "Please enter a valid number!";
+    document.getElementById("strutOut").style.backgroundColor = "var(--dark-warning)";
+}
+}
