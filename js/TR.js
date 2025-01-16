@@ -80,10 +80,10 @@ function bumperTolerance() {
             let correction;   
             if (inputValue[0] < bumpers[0]) {
                 correction = bumpers[0] - inputValue[0];
-                document.getElementById("CharlieOutPut").innerHTML = inputValue[0] + "\" is Out of tolerance. Add " + correction + "\" to bring within tolerance.";
+                document.getElementById("CharlieOutPut").innerHTML = inputValue[0] + "\" is Out of tolerance. Add " + correction  ;
             } else {
                 correction = inputValue[0] - bumpers[1];
-                document.getElementById("CharlieOutPut").innerHTML = inputValue[0] + "\" is Out of tolerance. Remove " + correction + "\" to bring within tolerance.";
+                document.getElementById("CharlieOutPut").innerHTML = inputValue[0] + "\" is Out of tolerance. Remove " + correction  ;
             }
             document.getElementById("CharlieOutPut").style.backgroundColor = "var(--dark-error)";
         }
@@ -104,10 +104,10 @@ if (!isNaN(inputValue[1])) {
         let correction;
         if (inputValue[1] < bumpers[2]) {
             correction = bumpers[2] - inputValue[1];
-            document.getElementById("radialOneOutPut").innerHTML = inputValue[1] + "\" is Out of tolerance. Add " + correction + "\" to bring within tolerance.";
+            document.getElementById("radialOneOutPut").innerHTML = inputValue[1] + "\" is Out of tolerance. Add " + correction  ;
         } else {
             correction = inputValue[1] - bumpers[3];
-            document.getElementById("radialOneOutPut").innerHTML = inputValue[1] + "\" is Out of tolerance. Remove " + correction + "\" to bring within tolerance.";
+            document.getElementById("radialOneOutPut").innerHTML = inputValue[1] + "\" is Out of tolerance. Remove " + correction  ;
         }
         document.getElementById("radialOneOutPut").style.backgroundColor = "var(--dark-error)";
     }
@@ -128,10 +128,10 @@ if (!isNaN(inputValue[2])) {
         let correction;
         if (inputValue[2] < bumpers[4]) {
             correction = bumpers[4] - inputValue[2];
-            document.getElementById("radialOutPutTwo").innerHTML = inputValue[2] + "\" is Out of tolerance. Add " + correction + "\" to bring within tolerance.";
+            document.getElementById("radialOutPutTwo").innerHTML = inputValue[2] + "\" is Out of tolerance. Add " + correction  ;
         } else {
             correction = inputValue[2] - bumpers[5];
-            document.getElementById("radialOutPutTwo").innerHTML = inputValue[2] + "\" is Out of tolerance. Remove " + correction + "\" to bring within tolerance.";
+            document.getElementById("radialOutPutTwo").innerHTML = inputValue[2] + "\" is Out of tolerance. Remove " + correction  ;
         }
         document.getElementById("radialOutPutTwo").style.backgroundColor = "var(--dark-error)";
     }
@@ -152,10 +152,10 @@ if (!isNaN(inputValue[3])) {
         let correction;
         if (inputValue[3] < bumpers[6]) {
             correction = bumpers[6] - inputValue[3];
-            document.getElementById("deltaOut").innerHTML = inputValue[3] + "\" is Out of tolerance. Add " + correction + "\" to bring within tolerance.";
+            document.getElementById("deltaOut").innerHTML = inputValue[3] + "\" is Out of tolerance. Add " + correction  ;
         } else {
             correction = inputValue[3] - bumpers[7];
-            document.getElementById("deltaOut").innerHTML = inputValue[3] + "\" is Out of tolerance. Remove " + correction + "\" to bring within tolerance.";
+            document.getElementById("deltaOut").innerHTML = inputValue[3] + "\" is Out of tolerance. Remove " + correction  ;
         }
         document.getElementById("deltaOut").style.backgroundColor = "var(--dark-error)";
     }
@@ -176,10 +176,10 @@ if (!isNaN(inputValue[4])) {
         let correction;
         if (inputValue[4] < bumpers[8]) {
             correction = bumpers[8] - inputValue[4];
-            document.getElementById("echoOut").innerHTML = inputValue[4] + "\" is Out of tolerance. Add " + correction + "\" to bring within tolerance.";
+            document.getElementById("echoOut").innerHTML = inputValue[4] + "\" is Out of tolerance. Add " + correction  ;
         } else {
             correction = inputValue[4] - bumpers[9];
-            document.getElementById("echoOut").innerHTML = inputValue[4] + "\" is Out of tolerance. Remove " + correction + "\" to bring within tolerance.";
+            document.getElementById("echoOut").innerHTML = inputValue[4] + "\" is Out of tolerance. Remove " + correction  ;
         }
         document.getElementById("echoOut").style.backgroundColor = "var(--dark-error)";
     }
@@ -200,10 +200,10 @@ if (!isNaN(inputValue[5])) {
         let correction;
         if (inputValue[5] < bumpers[10]) {
             correction = bumpers[10] - inputValue[5];
-            document.getElementById("dogHouseOut").innerHTML = inputValue[5] + "\" is Out of tolerance. Add " + correction + "\" to bring within tolerance.";
+            document.getElementById("dogHouseOut").innerHTML = inputValue[5] + "\" is Out of tolerance. Add " + correction  ;
         } else {
             correction = inputValue[5] - bumpers[11];
-            document.getElementById("dogHouseOut").innerHTML = inputValue[5] + "\" is Out of tolerance. Remove " + correction + "\" to bring within tolerance.";
+            document.getElementById("dogHouseOut").innerHTML = inputValue[5] + "\" is Out of tolerance. Remove " + correction  ;
         }
         document.getElementById("dogHouseOut").style.backgroundColor = "var(--dark-error)";
     }
@@ -224,10 +224,10 @@ if (!isNaN(inputValue[6])) {
         let correction;
         if (inputValue[6] < bumpers[12]) {
             correction = bumpers[12] - inputValue[6];
-            document.getElementById("dogHouseTwoOut").innerHTML = inputValue[6] + "\" is Out of tolerance. Add " + correction + "\" to bring within tolerance.";
+            document.getElementById("dogHouseTwoOut").innerHTML = inputValue[6] + "\" is Out of tolerance. Add " + correction  ;
         } else {
             correction = inputValue[6] - bumpers[13];
-            document.getElementById("dogHouseTwoOut").innerHTML = inputValue[6] + "\" is Out of tolerance. Remove " + correction + "\" to bring within tolerance.";
+            document.getElementById("dogHouseTwoOut").innerHTML = inputValue[6] + "\" is Out of tolerance. Remove " + correction  ;
         }
         document.getElementById("dogHouseTwoOut").style.backgroundColor = "var(--dark-error)";
     }
@@ -248,10 +248,10 @@ if (!isNaN(inputValue[7])) {
         let correction;
         if (inputValue[7] < bumpers[14]) {
             correction = bumpers[14] - inputValue[7];
-            document.getElementById("dogHouseThreeOut").innerHTML = inputValue[7] + "\" is Out of tolerance. Add " + correction + "\" to bring within tolerance.";
+            document.getElementById("dogHouseThreeOut").innerHTML = inputValue[7] + "\" is Out of tolerance. Add " + correction  ;
         } else {
             correction = inputValue[7] - bumpers[15];
-            document.getElementById("dogHouseThreeOut").innerHTML = inputValue[7] + "\" is Out of tolerance. Remove " + correction + "\" to bring within tolerance.";
+            document.getElementById("dogHouseThreeOut").innerHTML = inputValue[7] + "\" is Out of tolerance. Remove " + correction  ;
         }
         document.getElementById("dogHouseThreeOut").style.backgroundColor = "var(--dark-error)";
     }
@@ -272,10 +272,10 @@ if (!isNaN(inputValue[8])) {
         let correction;
         if (inputValue[8] < bumpers[16]) {
             correction = bumpers[16] - inputValue[8];
-            document.getElementById("strutOut").innerHTML = inputValue[8] + "\" is Out of tolerance. Add " + correction + "\" to bring within tolerance.";
+            document.getElementById("strutOut").innerHTML = inputValue[8] + "\" is Out of tolerance. Add " + correction  ;
         } else {
             correction = inputValue[8] - bumpers[17];
-            document.getElementById("strutOut").innerHTML = inputValue[8] + "\" is Out of tolerance. Remove " + correction + "\" to bring within tolerance.";
+            document.getElementById("strutOut").innerHTML = inputValue[8] + "\" is Out of tolerance. Remove " + correction  ;
         }
         document.getElementById("strutOut").style.backgroundColor = "var(--dark-error)";
     }
